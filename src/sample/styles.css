@@ -1,0 +1,73 @@
+/* MAIN ROOT PANE */
+#mainPane{
+    -fx-background-color: rgb(200,200,200);
+}
+
+/* MENU BAR */
+.menu-bar{
+    -fx-background-color: linear-gradient(rgb(180,180,180), rgb(140,140,140));
+}
+
+/* CUSTOM APP-BUTTON */
+#appButton{
+    -fx-background-color: linear-gradient(rgb(180,180,180), rgb(140,140,140));
+    -fx-font-size: 12px;
+    -fx-background-radius: 20px;
+    -fx-text-fill: black;
+}
+
+#appButton:hover{
+    -fx-background-color: linear-gradient(rgb(220,220,220), rgb(180,180,180));
+}
+
+/* TEXT FIELD */
+.text-field{
+    -fx-font-size: 12px;
+    -fx-background-radius: 20px;
+    -fx-text-fill: black;
+}
+
+/* COMBO BOX */
+.combo-box{
+    -fx-background-radius: 20px;
+}
+
+
+/* TEXT AREA */
+/* ".scroll-pane" represents textArea inner pane */
+.text-area{
+    -fx-font-size: 12px;
+    -fx-background-radius: 20px;
+    -fx-padding: 3px 3px 3px 3px;
+    -fx-text-fill: black;
+}
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+}
+
+
+/* LIST-VIEW and LIST CELLS (Including combo-box list cell)*/
+.list-view{
+    -fx-background-radius: 20px;
+    -fx-padding: 10px 3px 10px 3px;
+
+}
+.list-view.scroll-pane{
+    -fx-hbar-policy : never;
+    -fx-vbar-policy : never;
+}
+.list-cell{
+    -fx-font-size: 12px;
+    -fx-background-radius: 20px;
+    -fx-text-fill: black;
+}
+
+.list-cell:hover {
+    -fx-text-fill: blue;
+}

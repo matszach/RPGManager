@@ -1,0 +1,90 @@
+<?import javafx.geometry.Insets?>
+
+
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
+
+
+<?import sample.AppButton?>
+
+
+<BorderPane fx:id="mainPane" fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml" stylesheets="@styles.css">
+
+
+    <top>
+        <MenuBar>
+
+            <Menu text="Browse">
+                <items>
+                    <MenuItem text="NPC" onAction="#switchToBrowsingNPCs"/>
+                    <SeparatorMenuItem/>
+                    <MenuItem text="Location" onAction="#switchToBrowsingLocations"/>
+                </items>
+            </Menu>
+
+            <Menu text="Add">
+                <items>
+                    <MenuItem text="NPC" onAction="#switchToAddingNPCs"/>
+                    <SeparatorMenuItem/>
+                    <MenuItem text="Location" onAction="#switchToAddingLocations"/>
+                </items>
+            </Menu>
+
+        </MenuBar>
+    </top>
+
+
+
+
+
+    <left>
+        <VBox>
+            <padding><Insets top="7" bottom="7" right="7" left="7"/></padding>
+            <ListView fx:id="dataObjectListView" onMouseClicked="#recordToDisplay" disable="true" prefWidth="150" prefHeight="9999"/>
+        </VBox>
+    </left>
+
+
+
+
+
+    <center>
+        <VBox spacing="7" alignment="CENTER">
+            <padding><Insets top="7" bottom="7" right="7" left="7"/></padding>
+            <TextField fx:id="nameTextField"/>
+            <ComboBox fx:id="locationComboBox" prefWidth="9999"/>
+            <TextArea fx:id="descriptionTextArea" wrapText="true" prefHeight="9999"/>
+            <AppButton fx:id="updateOrAddRecordAppButton" onAction="#updateOrAddRecord" text="UPDATE RECORD"/>
+        </VBox>
+    </center>
+
+
+
+
+
+    <right>
+        <VBox spacing="7" alignment="TOP_CENTER">
+            <padding><Insets top="7" bottom="7" right="7" left="7"/></padding>
+            <Label fx:id="dataTypeLabel" text="NPCs"/>
+            <AppButton fx:id="showAllAppButton" onAction="#showAll" text="SHOW ALL"/>
+            <TextField fx:id="searchTextField"/>
+            <AppButton fx:id="searchByNameAppButton" onAction="#searchByName" text="SEARCH BY NAME"/>
+            <AppButton fx:id="searchByLocationAppButton" onAction="#searchByLocation" text="SEARCH BY LOCATION"/>
+        </VBox>
+    </right>
+
+
+
+</BorderPane>
